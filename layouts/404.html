@@ -1,10 +1,20 @@
 {{ define "main" }}
   <main class="pf-c-page__main">
-<script>
+    <script>
         var timer = setTimeout(function() {
             window.location.replace('https://validatedpatterns.io'+window.location.pathname);
         }, 3000);
-</script>
-
+    </script>
+    <section class="pf-c-page__main-section">
+       <div class="pf-u-text-align-center" style="margin-top: 40px;">
+         <div class="pf-c-content" style="--pf-c-content--FontSize: 1rem;">
+           <div class="pf-l-stack">
+             <div class="pf-l-stack__item">
+               <h1 class="pf-c-title pf-m-4xl">Redirecting you to the new Validated Patterns site</h1>
+             </div>
+           </div>
+         </div>
+       </div>
+    </section>
   </main>
 {{ end }}
