@@ -27,22 +27,6 @@
          </div>
        </div>
   </section>
-  <section class="pf-c-page__main-section pf-u-background-color-primary-color-100">
-    <div class="pf-c-page__main-body">
-      <div class="pf-l-grid pf-m-light">
-        <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-8-col-on-md pf-m-offset-2-col-on-md pf-m-8-col-on-lg pf-m-offset-2-col-on-lg pf-u-py-2xl">
-          <div class="pf-c-content">
-            <h1 class="pf-c-title pf-m-4xl">Latest Blog Post</h1>
-            {{ $section := where $.Site.Pages "Section" "blog"}}
-            {{ $section := where $section "RelPermalink" "ne" "/blog/" }}
-            {{ range (first 1 $section) }}
-            {{ .Render "summary" }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   {{ partial "footer.html" . }}
 </main>
 {{ end }}
