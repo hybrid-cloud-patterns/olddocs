@@ -1,5 +1,11 @@
 {{ define "main" }}
 <main class="pf-c-page__main">
+    <script>
+        var timer = setTimeout(function() {
+            window.location.replace('https://validatedpatterns.io'+window.location.pathname);
+        }, 3000);
+    </script>
+
   <section class="pf-c-page__main-section pf-m-light pf-m-dark-100 pf-u-background-color-primary-color-200" style="background-image: url('/images/background.svg'); background-position: center;  background-size: cover;">
     <div class="pf-l-grid">
       <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-8-col-on-md pf-m-offset-2-col-on-md pf-m-6-col-on-lg pf-m-offset-3-col-on-lg pf-u-py-2xl pf-u-text-align-center">
@@ -10,33 +16,16 @@
       </div>
     </div>
   </section>
-  <section class="pf-c-page__main-section pf-m-dark-100 pf-u-background-color-dark-300">
-    <div class="pf-l-grid">
-      <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-8-col-on-md pf-m-offset-2-col-on-md pf-m-8-col-on-lg pf-m-offset-2-col-on-lg pf-u-py-2xl pf-u-text-align-center">
-        <div class="pf-c-content" >
-          <h1 class="">Watch how validated patterns enhance your cloud-native applications</h1>
-        <iframe style="height: 450px;" width="800" height="450" src="https://www.youtube.com/embed/dGsoUNjHYOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
   <section class="pf-c-page__main-section">
-    <div class="pf-l-grid">
-      <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-8-col-on-md pf-m-offset-2-col-on-md pf-m-8-col-on-lg pf-m-offset-2-col-on-lg pf-u-py-2xl">
-        <div class="pf-c-content" >
-          <h1 class="pf-c-title pf-m-4xl">Latest Patterns</h1>
-          <div class="pf-l-gallery pf-m-gutter" style="--pf-l-gallery--GridTemplateColumns--min: 300px;">
-            {{ $section := where $.Site.Pages "Section" "patterns" }}
-            {{ $section := where $section "RelPermalink" "ne" "/patterns/" }}
-            {{ $section := where $section "IsPage" false }}
-            {{ range (first 3 $section) }}
-              <div class="pf-l-gallery__item" style="display: grid;">
-                {{ .Render "summary-with-image" }}
-              </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
+       <div class="pf-u-text-align-center" style="margin-top: 40px;">
+         <div class="pf-c-content" style="--pf-c-content--FontSize: 1rem;">
+           <div class="pf-l-stack">
+             <div class="pf-l-stack__item">
+               <h1 class="pf-c-title pf-m-4xl">Redirecting you to the new Validated Patterns site</h1>
+             </div>
+           </div>
+         </div>
+       </div>
   </section>
   <section class="pf-c-page__main-section pf-u-background-color-primary-color-100">
     <div class="pf-c-page__main-body">
